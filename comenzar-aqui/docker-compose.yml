@@ -1,0 +1,21 @@
+version: "3"
+
+volumes: 
+    named-vol:
+services: 
+    mybash: 
+        image: miapp:v1.
+        # Toma las variables de configuracion desde un archivo
+        env_file: 
+            - configs/${RUNTIME:-staging}.env 
+        ## Toma los valores de .env
+        #environment:
+        #    - env_var
+        # La variable siempre igual 
+        #     - common=always the same
+        build: 
+            context: .
+        volumes: 
+            - named-vol:/volumes/ 
+        ports: 
+            - ${HTTP_PORT:-8080}:8080
