@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: front
-        image: 609609837128.dkr.ecr.us-west-2.amazonaws.com/vero-repo:16d5ef6
+        image: kontinu/python-expert:v1.5
 
         ports:
         - name: http
