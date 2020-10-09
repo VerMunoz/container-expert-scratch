@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: front
-        image: 609609837128.dkr.ecr.us-west-2.amazonaws.com/vero-repo:16d5ef6
+        image: 609609837128.dkr.ecr.us-west-2.amazonaws.com/vero-repo:c2916db
 
         ports:
         - name: http
