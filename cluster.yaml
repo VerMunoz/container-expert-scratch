@@ -8,6 +8,6 @@ metadata:
   region: us-weast-2
 ​
 nodeGroups:
-  - name: nodegroup-1
+  - name: cluster-vero
     instanceType: t2.small
     desiredCapacity: 1
