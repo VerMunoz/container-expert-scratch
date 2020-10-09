@@ -2,10 +2,11 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: front
+  namespace: default
   labels:
     app: front
 spec:
-  replicas: 2
+  replicas: 4
   selector:
     matchLabels:
       name: front
@@ -14,9 +15,13 @@ spec:
       labels:
         name: front
     spec:
+      imagePullSecrets:
+          - name: awsecr-cred
       containers:
       - name: front
         image: 609609837128.dkr.ecr.us-west-2.amazonaws.com/vero-repo:c2916db
+
+
         ports:
         - name: http
           containerPort: 8080
